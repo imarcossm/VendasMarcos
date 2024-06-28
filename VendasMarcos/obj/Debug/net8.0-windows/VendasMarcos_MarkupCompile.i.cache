@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\Projetos\VendasMarcos\VendasMarcos\App.xaml
-11407045341
+42115426731
 
-6-996022860
-239137178285
-MainWindow.xaml;
+11-786089147
+253-1099524353
+MainWindow.xaml;Views\LocalizarClientes.xaml;Views\LocalizarProdutos.xaml;Views\TelaLogin.xaml;
 
-False
+True
 

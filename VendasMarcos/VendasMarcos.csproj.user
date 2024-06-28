@@ -7,7 +7,27 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\LocalizarClientes.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\LocalizarProdutos.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\TelaLogin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\LocalizarClientes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\LocalizarProdutos.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TelaLogin.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
