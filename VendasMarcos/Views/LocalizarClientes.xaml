@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VendasMarcos.Views"
         xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
         Title="Clientes"
         Height="550"
@@ -13,7 +14,49 @@
         MinWidth="650"
         Background="LightGray"
         WindowStartupLocation="CenterScreen">
-    <Grid>
-        
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="SearchTextBox" 
+                       Grid.Row="0" 
+                       Grid.Column="0" 
+                       Margin="0,0,10,0" 
+                       VerticalAlignment="Center"
+                       metro:TextBoxHelper.Watermark="Digite o nome do cliente..." mah:TextBoxHelper.WatermarkWrapping="Wrap"/>
+
+        <Button x:Name="PesquisarButton" 
+                FontWeight="Bold"
+                FontSize="12"
+                Grid.Row="0" 
+                Grid.Column="1" 
+                Content="Pesquisar" 
+                VerticalAlignment="Center"
+                ClickMode="Hover"
+                Click="PesquisarButton_Click"/>
+
+        <DataGrid x:Name="ResultsDataGrid" 
+                  Grid.Row="1" 
+                  Grid.ColumnSpan="2" 
+                  AutoGenerateColumns="False" 
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  CanUserResizeRows="False"
+                  IsReadOnly="True"
+                  Margin="0,10,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="*"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
+                <DataGridTextColumn Header="Telefone" Binding="{Binding Telefone}" Width="150"/>
+            </DataGrid.Columns>
+            </DataGrid>
     </Grid>
 </metro:MetroWindow>

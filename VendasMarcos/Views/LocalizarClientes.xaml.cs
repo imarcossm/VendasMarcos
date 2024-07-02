@@ -13,16 +13,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace VendasMarcos.Views
-{
-    /// <summary>
-    /// Lógica interna para LocalizarClientes.xaml
-    /// </summary>
+namespace VendasMarcos.Views {
     public partial class LocalizarClientes : MetroWindow
     {
         public LocalizarClientes()
         {
             InitializeComponent();
+        }
+
+        private void PesquisarButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

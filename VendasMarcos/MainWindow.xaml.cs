@@ -13,7 +13,7 @@ namespace VendasMarcos
         {
             InitializeComponent();
             var usuariosPersistentes = baseContext.Usuarios.ToList(); //aqui está sendo usado o objeto para consultar, veja que usa um .Usuarios, isso porque o modelo da tabela usuarios foi mapeada, se quiser usar produtos, por exemplo, precisa mapear também, já mostro
-            ProdutosDataGrid.ItemsSource = usuariosPersistentes; //ali encima tu fez uma lista com todos os usuários do banco, agora tu pode jogar isso diretamente para a tabela usando o ItemsSource
+            //ProdutosDataGrid.ItemsSource = usuariosPersistentes; //ali encima tu fez uma lista com todos os usuários do banco, agora tu pode jogar isso diretamente para a tabela usando o ItemsSource
             //la na datagrid, onde tem as colunas, é onde voce define o que será exibido, por isso eu alterei o Biding. A tabela recebe a lista desse modelo, mas só mostra o que voce definiu ali dentro
 
 
@@ -23,7 +23,7 @@ namespace VendasMarcos
         private void LocalizarClienteButton_Click(object sender, RoutedEventArgs e)
         {
             LocalizarClientes localizarClientes = new LocalizarClientes();
-            localizarClientes.Show();
+            localizarClientes.ShowDialog();
         }
 
         private void LocalizarProdutoButton_Click(object sender, RoutedEventArgs e)

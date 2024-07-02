@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xKwidhoyj6w951FMSCIEIdma6xq3lJbsDNnTz1jfIUgfqKKnIkw5wnSCTyjK0LIk48fqHZiYm9jIK5PbCqkM7w==",
+  "dgSpecHash": "oIsLSL/s1t9zXjf9LiwOK2KElGWhKU93Azqb/zp393QQOMukUwBDyS+6uYRPqKtM017kI/9JKWy8YkYBaATSIQ==",
   "success": true,
   "projectFilePath": "D:\\Projetos\\VendasMarcos\\VendasMarcos\\VendasMarcos.csproj",
   "expectedPackageFiles": [
@@ -45,6 +45,7 @@
     "C:\\Users\\Usuario\\.nuget\\packages\\mahapps.metro.iconpacks.vaadinicons\\5.0.0\\mahapps.metro.iconpacks.vaadinicons.5.0.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\mahapps.metro.iconpacks.weathericons\\5.0.0\\mahapps.metro.iconpacks.weathericons.5.0.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\mahapps.metro.iconpacks.zondicons\\5.0.0\\mahapps.metro.iconpacks.zondicons.5.0.0.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\mahapps.metro.resources\\0.6.1\\mahapps.metro.resources.0.6.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0\\microsoft.codeanalysis.common.4.5.0.nupkg.sha512",

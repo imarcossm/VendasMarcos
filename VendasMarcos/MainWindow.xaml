@@ -33,15 +33,26 @@
             <TextBlock FontWeight="Bold" FontSize="15" Text="Código do Cliente:" Margin="5" Height="25"/>
             <Grid Width="150" Margin="5">
                 <TextBox x:Name="ClienteTextBox" FontSize="15" Padding="0,0,30,0"/>
-                <Button Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center" Padding="0"
+                <Button Width="30"
+                        Height="30"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
                         Background="Transparent" BorderBrush="Transparent" ClickMode="Hover"
-                        x:Name="LocalizarClienteButton" MouseDown="LocalizarClienteButton_Click" ToolTip="Clique aqui para buscar os clientes cadastrados!">
+                        x:Name="LocalizarClienteButton" 
+                        MouseDown="LocalizarClienteButton_Click"
+                        ToolTip="Clique aqui para buscar os clientes cadastrados!"
+                        Margin="120,0,0,0">
                     <Image Source="pack://application:,,,/VendasMarcos;component/pastabusca.ico" Width="16" Height="16"/>
                 </Button>
             </Grid>
             <TextBlock FontWeight="Bold" FontSize="15" Text="Nome do Cliente:" Margin="5" Height="25"/>
             <TextBox Width="200" Margin="5"/>
-            <Button FontWeight="Bold" FontSize="12" Content="Buscar Cliente" Margin="5" ClickMode="Hover"/>
+            <Button 
+                    FontWeight="Bold"
+                    FontSize="12"
+                    Content="Buscar Cliente"
+                    Margin="5"
+                    ClickMode="Hover"/>
         </StackPanel>
 
         <!--Seção de busca de produtos-->

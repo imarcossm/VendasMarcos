@@ -817,6 +817,12 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
+      "MahApps.Metro.Resources/0.6.1": {
+        "type": "package",
+        "dependencies": {
+          "MahApps.Metro": "1.2.4"
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
         "type": "package",
         "compile": {
@@ -2792,6 +2798,22 @@
         "mahapps.metro.iconpacks.zondicons.nuspec"
       ]
     },
+    "MahApps.Metro.Resources/0.6.1": {
+      "sha512": "zuhG0vF/B2TKKr4OWwkmY6e5GSwmzRG2NN2FajvZkwFm3T6bFAHq0rEKFPT/42eYnO+kg7sxKECOimcc8fsG4w==",
+      "type": "package",
+      "path": "mahapps.metro.resources/0.6.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Resources/Entypo-license.txt",
+        "content/Resources/Entypo.ttf",
+        "content/Resources/Icons.xaml",
+        "content/Resources/IconsNonShared.xaml",
+        "content/Resources/WindowsIcons-license.txt",
+        "mahapps.metro.resources.0.6.1.nupkg.sha512",
+        "mahapps.metro.resources.nuspec"
+      ]
+    },
     "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
       "sha512": "UcSjPsst+DfAdJGVDsu346FX0ci0ah+lw3WRtn18NUwEqRt70HaOQ7lI72vy3+1LxtqI3T5GWwV39rQSrCzAeg==",
       "type": "package",
@@ -4213,6 +4235,9 @@
     "net8.0-windows7.0": [
       "MahApps.Metro >= 2.4.10",
       "MahApps.Metro.IconPacks >= 5.0.0",
+      "MahApps.Metro.IconPacks.Material >= 5.0.0",
+      "MahApps.Metro.IconPacks.Modern >= 5.0.0",
+      "MahApps.Metro.Resources >= 0.6.1",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.6",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.4"
@@ -4269,6 +4294,18 @@
           "MahApps.Metro.IconPacks": {
             "target": "Package",
             "version": "[5.0.0, )"
+          },
+          "MahApps.Metro.IconPacks.Material": {
+            "target": "Package",
+            "version": "[5.0.0, )"
+          },
+          "MahApps.Metro.IconPacks.Modern": {
+            "target": "Package",
+            "version": "[5.0.0, )"
+          },
+          "MahApps.Metro.Resources": {
+            "target": "Package",
+            "version": "[0.6.1, )"
           },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
