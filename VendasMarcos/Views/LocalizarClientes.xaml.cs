@@ -13,7 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace VendasMarcos.Views {
+namespace VendasMarcos.Views
+{
     public partial class LocalizarClientes : MetroWindow
     {
         public LocalizarClientes()
@@ -24,6 +25,19 @@ namespace VendasMarcos.Views {
         private void PesquisarButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void PesquisarClienteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FecharJanelaClientes_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                this.Close();
+            }
         }
     }
 }

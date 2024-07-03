@@ -63,7 +63,6 @@ D:\Projetos\VendasMarcos\VendasMarcos\bin\Debug\net8.0-windows\MahApps.Metro.Ico
 D:\Projetos\VendasMarcos\VendasMarcos\bin\Debug\net8.0-windows\MahApps.Metro.IconPacks.VaadinIcons.dll
 D:\Projetos\VendasMarcos\VendasMarcos\bin\Debug\net8.0-windows\MahApps.Metro.IconPacks.WeatherIcons.dll
 D:\Projetos\VendasMarcos\VendasMarcos\bin\Debug\net8.0-windows\MahApps.Metro.IconPacks.Zondicons.dll
-D:\Projetos\VendasMarcos\VendasMarcos\obj\Debug\net8.0-windows\VendasMarcos.sourcelink.json
 D:\Projetos\VendasMarcos\VendasMarcos\bin\Debug\net8.0-windows\Humanizer.dll
 D:\Projetos\VendasMarcos\VendasMarcos\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Projetos\VendasMarcos\VendasMarcos\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.dll
