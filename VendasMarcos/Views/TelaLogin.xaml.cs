@@ -11,17 +11,25 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MahApps;
+using MahApps.Metro;
+using MahApps.Metro.Controls;
 
 namespace VendasMarcos.Views
 {
     /// <summary>
     /// Lógica interna para TelaLogin.xaml
     /// </summary>
-    public partial class TelaLogin : Window
+    public partial class TelaLogin : MetroWindow
     {
         public TelaLogin()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

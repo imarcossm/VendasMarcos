@@ -303,3 +303,4 @@ C:\Projetos\VendasMarcos\VendasMarcos\obj\Debug\net8.0-windows\refint\VendasMarc
 C:\Projetos\VendasMarcos\VendasMarcos\obj\Debug\net8.0-windows\VendasMarcos.pdb
 C:\Projetos\VendasMarcos\VendasMarcos\obj\Debug\net8.0-windows\VendasMarcos.genruntimeconfig.cache
 C:\Projetos\VendasMarcos\VendasMarcos\obj\Debug\net8.0-windows\ref\VendasMarcos.dll
+D:\Projetos\VendasMarcos\VendasMarcos\obj\Debug\net8.0-windows\VendasMarcos.sourcelink.json

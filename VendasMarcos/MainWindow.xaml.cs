@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Input;
 using MahApps;
 using MahApps.Metro;
+using MahApps.Metro.IconPacks;
 using MahApps.Metro.Controls;
 using VendasMarcos.Models;
 using VendasMarcos.Views;
@@ -12,6 +13,7 @@ namespace VendasMarcos
     public partial class MainWindow : MetroWindow
     {
         BaseContext baseContext { get; set; } = new BaseContext();
+        private bool _isClosingConfirmed = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -37,14 +39,22 @@ namespace VendasMarcos
             if(e.Key == Key.Escape)
             {
                 e.Handled = true;
+                if(!_isClosingConfirmed )
+                {
+                    ShowExitConfirmation();
+                }
+            }
+        }
+
+        private void MetroWindow_Closing(object sender, CancelEventArgs e)
+        {
+            if (!_isClosingConfirmed)
+            {
+                e.Cancel = true;
                 ShowExitConfirmation();
             }
         }
 
-        private void FecharAplicacaoX_Closing(object sender, CancelEventArgs e)
-        {
-            ShowExitConfirmation();
-        }
         private void ShowExitConfirmation()
         {
             MessageBoxResult messageBoxResult = MessageBox.Show(
@@ -55,6 +65,7 @@ namespace VendasMarcos
 
             if (messageBoxResult == MessageBoxResult.Yes)
             {
+                _isClosingConfirmed = true;
                 Application.Current.Shutdown();
             }
         }
