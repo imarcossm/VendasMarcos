@@ -13,7 +13,7 @@
         MinWidth="1200"
         Background="LightGray"
                    
-        KeyDown="FecharAplicacaoEsc_KeyDown"
+        KeyDown="MetroWindow_KeyDown"
         Closing="FecharAplicacaoX_Closing"
                    
         BorderThickness="0"

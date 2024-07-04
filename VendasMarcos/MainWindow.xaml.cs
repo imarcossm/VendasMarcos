@@ -11,7 +11,7 @@ namespace VendasMarcos
 {
     public partial class MainWindow : MetroWindow
     {
-        BaseContext baseContext { get; set; } = new BaseContext(); // aqui você está instanciando um objeto que faz conexão com o banco, de maneira básica, se tu chamar isso em toda tela tá tranquilo, já que tu tá aprendendo a usar o ef
+        BaseContext baseContext { get; set; } = new BaseContext();
         public MainWindow()
         {
             InitializeComponent();
@@ -20,18 +20,25 @@ namespace VendasMarcos
         private void LocalizarClienteButton_Click(object sender, RoutedEventArgs e)
         {
             LocalizarClientes localizarClientes = new LocalizarClientes();
+            localizarClientes.Owner = this;
             localizarClientes.ShowDialog();
         }
 
         private void LocalizarProdutoButton_Click(object sender, RoutedEventArgs e)
         {
             LocalizarProdutos localizarProdutos = new LocalizarProdutos();
+            localizarProdutos.Owner = this;
             localizarProdutos.ShowDialog();
         }
 
-        private void FecharAplicacaoEsc_KeyDown(object sender, KeyEventArgs e)
+
+        private void MetroWindow_KeyDown(object sender, KeyEventArgs e)
         {
+            if(e.Key == Key.Escape)
+            {
+                e.Handled = true;
                 ShowExitConfirmation();
+            }
         }
 
         private void FecharAplicacaoX_Closing(object sender, CancelEventArgs e)
