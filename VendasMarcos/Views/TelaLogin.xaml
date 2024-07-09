@@ -7,7 +7,7 @@
                    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
                    mc:Ignorable="d"
                    Title="Login"
-                   TitleAlignment="Center"
+                   TitleAlignment="Center"                   
                    WindowStartupLocation="CenterScreen"
                    ResizeMode="NoResize"
                    Height="300"
@@ -15,11 +15,11 @@
                    Background="LightGray">
     <Grid>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
-            <iconPacks:PackIconMaterial Kind="AccountBox" Foreground="DarkBlue"  Width="70" Height="70" Margin="0,0,0,10" HorizontalAlignment="Center"/>
+            <iconPacks:PackIconMaterial Kind="AccountLock" Foreground="DarkBlue"  Width="70" Height="70" Margin="0,0,0,10" HorizontalAlignment="Center"/>
             <TextBlock Text="Login" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
             <TextBox x:Name="UsuarioTextBox" metro:TextBoxHelper.Watermark="Usuário" FontWeight="Bold" Margin="0,0,0,10"/>
-            <PasswordBox x:Name="SenhaBox" metro:TextBoxHelper.Watermark="Password" FontWeight="Bold" Margin="0,0,0,20"/>
-            <Button Content="Login" FontWeight="Bold" Click="LoginButton_Click" Style="{StaticResource MahApps.Styles.Button.Dialogs.AccentHighlight}"/>
+            <PasswordBox x:Name="SenhaPasswordBox" metro:TextBoxHelper.Watermark="Password" FontWeight="Bold" Margin="0,0,0,20"/>
+            <Button Content="Login" FontWeight="Bold" Click="LoginButton_Click" Cursor="Hand" Style="{StaticResource MahApps.Styles.Button.Dialogs.AccentHighlight}"/>
         </StackPanel>
     </Grid>
 </metro:MetroWindow>

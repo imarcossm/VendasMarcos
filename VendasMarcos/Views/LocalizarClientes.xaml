@@ -24,7 +24,7 @@
 
     <mah:MetroWindow.IconTemplate>
         <DataTemplate>
-            <iconPacks:PackIconUnicons Kind="FontLine" 
+            <iconPacks:PackIconUnicons Kind="WindowsLine" 
                                    Width="25" 
                                    Height="30"
                                    HorizontalAlignment="Center"
@@ -40,42 +40,42 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="62*"/>
+            <ColumnDefinition Width="841*"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
         <TextBox x:Name="SearchClienteBox" 
                        Grid.Row="0" 
                        Grid.Column="0" 
-                       Margin="0,0,10,0" 
-                       VerticalAlignment="Center"
-                       metro:TextBoxHelper.Watermark="Digite o nome do cliente..." mah:TextBoxHelper.WatermarkWrapping="Wrap"/>
+                       Margin="0,2,10,0" 
+                       VerticalAlignment="Top"
+                       metro:TextBoxHelper.Watermark="Digite o nome do cliente..." mah:TextBoxHelper.WatermarkWrapping="Wrap" Grid.ColumnSpan="2"/>
 
         <Button x:Name="PesquisarClienteButton" 
                 FontWeight="Bold"
                 FontSize="12"
                 Grid.Row="0" 
-                Grid.Column="1" 
+                Grid.Column="2" 
                 Content="Pesquisar" 
-                VerticalAlignment="Center"
+                VerticalAlignment="Top"
                 ClickMode="Hover"
                 Click="PesquisarClienteButton_Click"/>
 
         <DataGrid x:Name="ResultsClientesDataGrid" 
-                  Grid.Row="1" 
-                  Grid.ColumnSpan="2" 
+                  Grid.ColumnSpan="3" 
                   AutoGenerateColumns="False" 
                   CanUserAddRows="False"
                   CanUserDeleteRows="False"
                   CanUserResizeRows="False"
                   IsReadOnly="True"
-                  Margin="0,10,0,0">
+                  Margin="0,40,0,0" Grid.RowSpan="2">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Código" Binding="{Binding CodCliente}" Width="80" MinWidth="75"/>
+                <DataGridTextColumn Header="Código" Binding="{Binding Codigo}" Width="80" MinWidth="75"/>
                 <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="*"/>
                 <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
                 <DataGridTextColumn Header="Telefone" Binding="{Binding Telefone}" Width="150"/>
             </DataGrid.Columns>
-            </DataGrid>
+        </DataGrid>
     </Grid>
 </metro:MetroWindow>

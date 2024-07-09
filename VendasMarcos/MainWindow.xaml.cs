@@ -5,17 +5,18 @@ using MahApps;
 using MahApps.Metro;
 using MahApps.Metro.IconPacks;
 using MahApps.Metro.Controls;
-using VendasMarcos.Models;
 using VendasMarcos.Views;
 
 namespace VendasMarcos
 {
     public partial class MainWindow : MetroWindow
     {
-        BaseContext baseContext { get; set; } = new BaseContext();
         private bool _isClosingConfirmed = false;
+
         public MainWindow()
         {
+            TelaLogin telaLogin = new TelaLogin();
+            telaLogin.ShowDialog();
             InitializeComponent();
         }
 

@@ -11,7 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using VendasMarcos.Models;
 using VendasMarcos.Views;
 using MahApps;
 using MahApps.Metro;
@@ -24,23 +23,16 @@ namespace VendasMarcos.Views
     /// </summary>
     public partial class TelaLogin : MetroWindow
     {
-        public string Usuario { get; set; }
-        public string Senha { get; set; }
-
-        public TelaLogin(string usuario, string senha)
-        {
-            Usuario = usuario;
-            Senha = senha;
-        }
-
         public TelaLogin()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-
+            string usuario = UsuarioTextBox.Text;
+            string senha = SenhaPasswordBox.Password;
         }
+
     }
 }

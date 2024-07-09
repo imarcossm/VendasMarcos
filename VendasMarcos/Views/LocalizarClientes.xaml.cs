@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VendasMarcos.TempModel;
 
 namespace VendasMarcos.Views
 {
@@ -20,16 +21,30 @@ namespace VendasMarcos.Views
         public LocalizarClientes()
         {
             InitializeComponent();
+            CarregarClientes();
         }
 
-        private void PesquisarButton_Click(object sender, RoutedEventArgs e)
+        public void CarregarClientes()
         {
-
+            using(var context = new DBContext())
+            {
+                var clientes = context.Clientes.ToList();
+                ResultsClientesDataGrid.ItemsSource = clientes;
+            }
         }
 
         private void PesquisarClienteButton_Click(object sender, RoutedEventArgs e)
         {
+            string searchText = SearchClienteBox.Text.ToLower();
 
+            using (var context = new DBContext())
+            {
+                var filtrarClientes = context.Clientes
+                    .Where(c => c.Nome.ToLower().Contains(searchText))
+                    .ToList();
+
+                ResultsClientesDataGrid.ItemsSource = filtrarClientes;
+            }
         }
 
         private void FecharJanelaClientes_KeyDown(object sender, KeyEventArgs e)
