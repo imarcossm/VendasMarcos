@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
+using VendasMarcos.TempModel;
 
 namespace VendasMarcos.Views
 {
@@ -23,11 +24,20 @@ namespace VendasMarcos.Views
         public LocalizarProdutos()
         {
             InitializeComponent();
+            CarregarProdutos();
+        }
+
+        public void CarregarProdutos()
+        {
+            using (var context = new DBContext())
+            {
+                var produtos = context.Produtos.ToList();
+                ResultsProdutosDataGrid.ItemsSource = produtos;
+            }
         }
 
         private void PesquisarProdutoButton_Click(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void FecharJanelaProdutos_KeyDown(object sender, KeyEventArgs e)
