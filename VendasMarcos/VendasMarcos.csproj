@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <None Remove="loginIcone.ico" />
-    <None Remove="LoginIcone.png" />
     <None Remove="pastabusca.ico" />
     <None Remove="pastabusca.png" />
   </ItemGroup>
@@ -33,7 +32,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="LoginIcone.png" />
     <Resource Include="pastabusca.ico" />
   </ItemGroup>
 

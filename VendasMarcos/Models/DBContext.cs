@@ -18,6 +18,7 @@ public partial class DBContext : DbContext
 
     public virtual DbSet<Clientes> Clientes { get; set; }
     public virtual DbSet<Produtos> Produtos { get; set; }
+    public virtual DbSet<ClientesTelefones> ClientesTelefones { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -421,6 +422,40 @@ public partial class DBContext : DbContext
             entity.Property(e => e.Ufemissor)
                 .HasMaxLength(2)
                 .HasColumnName("ufemissor");
+        });
+
+        modelBuilder.Entity<ClientesTelefones>(entity =>
+        {
+            entity.HasKey(e => e.Codigo).HasName("clientes_telefones_pkey");
+
+            entity.ToTable("clientes_telefones");
+
+            entity.HasIndex(e => new { e.Codcliente, e.Ddi, e.Ddd, e.Telefone, e.Ramal }, "clientes_telefones_codcliente_ddi_ddd_telefone_ramal_idx").IsUnique();
+
+            entity.HasIndex(e => new { e.Codcliente, e.Principal }, "clientes_telefones_codcliente_principal_idx")
+                .IsUnique()
+                .HasFilter("(principal = true)");
+
+            entity.Property(e => e.Codigo).HasColumnName("codigo");
+            entity.Property(e => e.Codcliente).HasColumnName("codcliente");
+            entity.Property(e => e.Ddd).HasColumnName("ddd");
+            entity.Property(e => e.Ddi)
+                .HasDefaultValue(55)
+                .HasColumnName("ddi");
+            entity.Property(e => e.Lastupdateinfo)
+                .HasDefaultValueSql("date_trunc('SECOND'::text, now())")
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("lastupdateinfo");
+            entity.Property(e => e.Principal)
+                .HasDefaultValue(false)
+                .HasColumnName("principal");
+            entity.Property(e => e.Ramal).HasColumnName("ramal");
+            entity.Property(e => e.Telefone)
+                .HasMaxLength(11)
+                .HasColumnName("telefone");
+            entity.Property(e => e.Tipo)
+                .HasMaxLength(20)
+                .HasColumnName("tipo");
         });
 
 

@@ -30,8 +30,25 @@ namespace VendasMarcos.Views
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            string usuario = UsuarioTextBox.Text;
-            string senha = SenhaPasswordBox.Password;
+
+        }
+
+        private static bool IsValidUser(string usuario, string senha)
+        {
+            string ip = "127.0.0.1";
+            string port = "5432";
+            string db = "base_habsoluta";
+
+            string conexaoDB;
+
+            if (usuario == "zeus")
+            {
+                conexaoDB = $"Server={ip}; Port={port}; Database={db}; User Id={usuario}; Password={senha};";
+            }
+            else
+            {
+                conexaoDB = $"Server={ip}; Port={port}; Database={db}; User Id={usuario}; Password=@2t24F5D4n75Z8foE8541Gj54gS5+878a@341R5$sGa4ES5$j%D14s#5d!5";
+            }
         }
 
     }

@@ -12,12 +12,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VendasMarcos.Models;
 using VendasMarcos.TempModel;
 
 namespace VendasMarcos.Views
 {
     public partial class LocalizarClientes : MetroWindow
     {
+        private List<ClientesView> clientes;
         public LocalizarClientes()
         {
             InitializeComponent();
@@ -26,11 +28,14 @@ namespace VendasMarcos.Views
 
         public void CarregarClientes()
         {
+            List<Clientes> clientes = new List<Clientes>();
             using(var context = new DBContext())
             {
-                var clientes = context.Clientes.ToList();
-                ResultsClientesDataGrid.ItemsSource = clientes;
+                clientes = context.Clientes.ToList();
             }
+
+
+            ResultsClientesDataGrid.ItemsSource = clientes;
         }
 
         private void PesquisarClienteButton_Click(object sender, RoutedEventArgs e)

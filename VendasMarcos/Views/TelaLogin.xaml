@@ -18,7 +18,7 @@
             <iconPacks:PackIconMaterial Kind="AccountLock" Foreground="DarkBlue"  Width="70" Height="70" Margin="0,0,0,10" HorizontalAlignment="Center"/>
             <TextBlock Text="Login" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
             <TextBox x:Name="UsuarioTextBox" metro:TextBoxHelper.Watermark="Usuário" FontWeight="Bold" Margin="0,0,0,10"/>
-            <PasswordBox x:Name="SenhaPasswordBox" metro:TextBoxHelper.Watermark="Password" FontWeight="Bold" Margin="0,0,0,20"/>
+            <PasswordBox x:Name="SenhaPasswordBox" metro:TextBoxHelper.Watermark="Senha" FontWeight="Bold" Margin="0,0,0,20"/>
             <Button Content="Login" FontWeight="Bold" Click="LoginButton_Click" Cursor="Hand" Style="{StaticResource MahApps.Styles.Button.Dialogs.AccentHighlight}"/>
         </StackPanel>
     </Grid>
