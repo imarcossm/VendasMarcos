@@ -1,36 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using VendasMarcos.Views;
-using MahApps;
-using MahApps.Metro;
 using MahApps.Metro.Controls;
+using System.Windows.Input;
+using Npgsql;
 
 namespace VendasMarcos.Views
 {
-    /// <summary>
-    /// Lógica interna para TelaLogin.xaml
-    /// </summary>
     public partial class TelaLogin : MetroWindow
     {
         public TelaLogin()
         {
             InitializeComponent();
+            this.Closing += TelaLogin_Closing; // Adiciona o manipulador de fechamento
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
+            string usuario = UsuarioTextBox.Text;
+            string senha = SenhaPasswordBox.Password;
 
+            if (IsValidUser(usuario, senha))
+            {
+                // Fechar a tela de login
+                this.Close();
+
+                // Criar e exibir a tela principal
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou senha inválidos.");
+            }
         }
 
         private static bool IsValidUser(string usuario, string senha)
@@ -47,9 +48,57 @@ namespace VendasMarcos.Views
             }
             else
             {
-                conexaoDB = $"Server={ip}; Port={port}; Database={db}; User Id={usuario}; Password=@2t24F5D4n75Z8foE8541Gj54gS5+878a@341R5$sGa4ES5$j%D14s#5d!5";
+                conexaoDB = $"Server={ip}; Port={port}; Database={db}; User Id={usuario}; Password=senha_padrao;";
+            }
+
+            try
+            {
+                using (var connection = new NpgsqlConnection(conexaoDB))
+                {
+                    connection.Open();
+
+                    string query = $"SELECT 1 FROM usuarios WHERE login = @usuario AND pass = md5(@senha);";
+                    using (var cmd = new NpgsqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("usuario", usuario);
+                        cmd.Parameters.AddWithValue("senha", senha);
+
+                        var result = cmd.ExecuteScalar();
+                        return result != null;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao conectar ao banco de dados: {ex.Message}");
+                return false;
             }
         }
 
+        private void UsuarioTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                SenhaPasswordBox.Focus(); // Muda o foco para a PasswordBox
+                e.Handled = true;
+            }
+        }
+
+        private void SenhaPasswordBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                // Define o foco no botão de login sem chamar o método de clique
+                LoginButton.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void TelaLogin_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            // Impede o fechamento normal da janela e encerra a aplicação
+            e.Cancel = true;
+            Application.Current.Shutdown(); // Encerra a aplicação completamente
+        }
     }
 }
