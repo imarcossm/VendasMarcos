@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|solutionrelative:vendasmarcos\\views\\telalogin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|d:\\projetos\\vendasmarcos\\vendasmarcos\\views\\telalogin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|solutionrelative:vendasmarcos\\views\\telalogin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|d:\\projetos\\vendasmarcos\\vendasmarcos\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|solutionrelative:vendasmarcos\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|d:\\projetos\\vendasmarcos\\vendasmarcos\\views\\telalogin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|solutionrelative:vendasmarcos\\views\\telalogin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|d:\\projetos\\vendasmarcos\\vendasmarcos\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -42,13 +42,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\Projetos\\VendasMarcos\\VendasMarcos\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "VendasMarcos\\MainWindow.xaml.cs",
               "ToolTip": "D:\\Projetos\\VendasMarcos\\VendasMarcos\\MainWindow.xaml.cs",
               "RelativeToolTip": "VendasMarcos\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-05T12:18:58.453Z",
               "IsPinned": true,
@@ -102,8 +102,7 @@
               "ToolTip": "D:\\Projetos\\VendasMarcos\\VendasMarcos\\MainWindow.xaml",
               "RelativeToolTip": "VendasMarcos\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-05T12:19:00.761Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-05T12:19:00.761Z"
             },
             {
               "$type": "Document",
@@ -119,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TelaLogin.xaml.cs",
               "DocumentMoniker": "D:\\Projetos\\VendasMarcos\\VendasMarcos\\Views\\TelaLogin.xaml.cs",
               "RelativeDocumentMoniker": "VendasMarcos\\Views\\TelaLogin.xaml.cs",
@@ -127,8 +126,7 @@
               "RelativeToolTip": "VendasMarcos\\Views\\TelaLogin.xaml.cs",
               "ViewState": "AQIAADgAAAAAAAAAAAAYwGgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T19:42:52.295Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T19:42:52.295Z"
             }
           ]
         }
