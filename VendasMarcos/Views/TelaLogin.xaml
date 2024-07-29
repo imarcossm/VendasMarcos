@@ -12,11 +12,13 @@
                    ResizeMode="NoResize"
                    Height="300"
                    Width="400"
-                   Background="LightGray">
+                   Background="LightGray"
+                   >
     <Grid>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
             <iconPacks:PackIconMaterial Kind="AccountLock" Foreground="#FF003BB0" Width="58" Height="66" Margin="0,0,0,10" HorizontalAlignment="Center"/>
             <TextBlock Text="Login" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20" Cursor="Hand"/>
+            <TextBlock x:Name="loginInvalido" Visibility="Collapsed" Text="Login Invalido" Foreground="Red" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20" Cursor="Hand"/>
 
             <!-- Grid for Username TextBox with Icon -->
             <Border BorderBrush="DarkGray" BorderThickness="1" CornerRadius="4" Margin="0,0,0,10">

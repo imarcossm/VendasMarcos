@@ -24,7 +24,8 @@
         GlowBrush="Black"
         ResizeMode="CanResizeWithGrip"
 
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Loaded="MetroWindow_Loaded">
 
     <Window.Resources>
         <Style TargetType="TextBlock">

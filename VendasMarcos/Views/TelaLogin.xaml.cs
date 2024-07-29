@@ -8,10 +8,13 @@ namespace VendasMarcos.Views
 {
     public partial class TelaLogin : MetroWindow
     {
+
+        public bool Confirmou { get; private set; }
+
         public TelaLogin()
         {
             InitializeComponent();
-            this.Closing += TelaLogin_Closing; // Adiciona o manipulador de fechamento
+            UsuarioTextBox.Focus();
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
@@ -21,15 +24,13 @@ namespace VendasMarcos.Views
 
             if (IsValidUser(usuario, senha))
             {
-                // Fechar a tela de login
+                Confirmou = true;
                 this.Close();
-
-                // Criar e exibir a tela principal
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
             }
             else
             {
+                Confirmou = false;
+                loginInvalido.Visibility = Visibility.Visible;
                 MessageBox.Show("Usuário ou senha inválidos.");
             }
         }
@@ -94,11 +95,6 @@ namespace VendasMarcos.Views
             }
         }
 
-        private void TelaLogin_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            // Impede o fechamento normal da janela e encerra a aplicação
-            e.Cancel = true;
-            Application.Current.Shutdown(); // Encerra a aplicação completamente
-        }
+ 
     }
 }

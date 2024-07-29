@@ -6,6 +6,7 @@ using MahApps.Metro;
 using MahApps.Metro.IconPacks;
 using MahApps.Metro.Controls;
 using VendasMarcos.Views;
+using System.Configuration;
 
 namespace VendasMarcos
 {
@@ -15,9 +16,24 @@ namespace VendasMarcos
 
         public MainWindow()
         {
+            InitializeComponent();
+           // CarregaWindow();
+        }
+
+        private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregaWindow();
+        }
+
+        private void CarregaWindow()
+        {
             TelaLogin telaLogin = new TelaLogin();
             telaLogin.ShowDialog();
-            InitializeComponent();
+
+            if (!telaLogin.Confirmou)
+            {
+                ShowExitConfirmation();
+            }
         }
 
         private void LocalizarClienteButton_Click(object sender, RoutedEventArgs e)
