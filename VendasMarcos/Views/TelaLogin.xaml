@@ -10,71 +10,85 @@
                    TitleAlignment="Center"
                    WindowStartupLocation="CenterScreen"
                    ResizeMode="NoResize"
-                   Height="300"
-                   Width="400"
+                   BorderThickness="0"
+                   GlowBrush="#FF003BB0"
+                   Height="380"
+                   Width="350"
                    Background="LightGray"
-                   >
+                   WindowStyle="None">
+
     <Grid>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
             <iconPacks:PackIconMaterial Kind="AccountLock" Foreground="#FF003BB0" Width="58" Height="66" Margin="0,0,0,10" HorizontalAlignment="Center"/>
-            <TextBlock Text="Login" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20" Cursor="Hand"/>
-            <TextBlock x:Name="loginInvalido" Visibility="Collapsed" Text="Login Invalido" Foreground="Red" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20" Cursor="Hand"/>
+            <TextBlock Text="Login" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20" Cursor="Hand"/>
+            <TextBlock x:Name="loginInvalido" Visibility="Collapsed" Text="Login Inválido" Foreground="Red" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
 
-            <!-- Grid for Username TextBox with Icon -->
-            <Border BorderBrush="DarkGray" BorderThickness="1" CornerRadius="4" Margin="0,0,0,10">
+            <Border BorderBrush="DarkGray" BorderThickness="1" CornerRadius="8" Margin="0,0,0,10" Background="White" Padding="5">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Border BorderBrush="DarkGray" BorderThickness="1" CornerRadius="4" 
-                            Background="LightGray" Width="24" Height="24"
-                            HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-                        <iconPacks:PackIconMaterial Kind="Account" 
-                                                     Foreground="Gray" 
-                                                     Width="16" 
-                                                     Height="16" 
-                                                     HorizontalAlignment="Center" 
-                                                     VerticalAlignment="Center"/>
-                    </Border>
+                    <iconPacks:PackIconMaterial Kind="Account" 
+                                                Foreground="Gray" 
+                                                Width="24" 
+                                                Height="24" 
+                                                HorizontalAlignment="Center" 
+                                                VerticalAlignment="Center"/>
 
                     <TextBox x:Name="UsuarioTextBox" 
                              metro:TextBoxHelper.Watermark="Usuário" 
                              FontWeight="Bold" 
                              Grid.Column="1" 
                              Padding="8,5,5,5" 
-                             Margin="0,0,0,0"
+                             Margin="5,0,0,0"
                              KeyDown="UsuarioTextBox_KeyDown"/>
                 </Grid>
             </Border>
 
-            <!-- Grid for PasswordBox with Icon -->
-            <Border BorderBrush="DarkGray" BorderThickness="1" CornerRadius="4" Margin="0,0,0,20">
+            <Border BorderBrush="DarkGray" BorderThickness="1" CornerRadius="8" Margin="0,0,0,20" Background="White" Padding="5">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
 
-                    <Border BorderBrush="DarkGray" BorderThickness="1" CornerRadius="4" 
-                            Background="LightGray" Width="24" Height="24"
-                            HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-                        <iconPacks:PackIconMaterial Kind="Lock" 
-                                                     Foreground="Gray" 
-                                                     Width="16" 
-                                                     Height="16" 
-                                                     HorizontalAlignment="Center" 
-                                                     VerticalAlignment="Center"/>
-                    </Border>
+                    <iconPacks:PackIconMaterial Kind="Lock" 
+                                                Foreground="Gray" 
+                                                Width="24" 
+                                                Height="24" 
+                                                HorizontalAlignment="Center" 
+                                                VerticalAlignment="Center"/>
 
                     <PasswordBox x:Name="SenhaPasswordBox" 
                                  metro:TextBoxHelper.Watermark="Senha" 
                                  FontWeight="Bold" 
                                  Grid.Column="1" 
                                  Padding="8,5,5,5" 
-                                 Margin="0,0,0,0"
+                                 Margin="5 0 0 0"
                                  KeyDown="SenhaPasswordBox_KeyDown"/>
+
+                    <TextBox x:Name="SenhaTextBox" 
+                             Visibility="Collapsed"
+                             metro:TextBoxHelper.Watermark="Senha" 
+                             FontWeight="Bold" 
+                             Grid.Column="1" 
+                             Padding="8,5,5,5" 
+                             Margin="5 0 0 0"
+                             KeyDown="SenhaTextBox_KeyDown"/>
+
+                    <Button x:Name="ToViewPassword"
+                            Grid.Column="2" 
+                            Content="👁" 
+                            Background="Transparent" 
+                            BorderBrush="Transparent" 
+                            Width="26" 
+                            Height="24" 
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Center"
+                            Click="PasswordVisibility_Click"/>
                 </Grid>
             </Border>
 
@@ -83,7 +97,9 @@
                     FontWeight="Bold" 
                     Click="LoginButton_Click" 
                     Cursor="Hand" 
-                    Style="{StaticResource MahApps.Styles.Button.Dialogs.AccentHighlight}"/>
+                    Style="{StaticResource MahApps.Styles.Button.Dialogs.AccentHighlight}"
+                    Height="35"
+                    Margin="0,0,0,10"/>
         </StackPanel>
     </Grid>
 </metro:MetroWindow>

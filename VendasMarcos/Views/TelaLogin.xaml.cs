@@ -8,7 +8,7 @@ namespace VendasMarcos.Views
 {
     public partial class TelaLogin : MetroWindow
     {
-
+        private bool isPasswordVisible = false;
         public bool Confirmou { get; private set; }
 
         public TelaLogin()
@@ -21,6 +21,15 @@ namespace VendasMarcos.Views
         {
             string usuario = UsuarioTextBox.Text;
             string senha = SenhaPasswordBox.Password;
+
+            if (isPasswordVisible)
+            {
+                senha = SenhaTextBox.Text;
+            }
+            else
+            {
+                senha = SenhaPasswordBox.Password;
+            }
 
             if (IsValidUser(usuario, senha))
             {
@@ -95,6 +104,32 @@ namespace VendasMarcos.Views
             }
         }
 
- 
+        private void SenhaTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                // Define o foco no botão de login sem chamar o método de clique
+                LoginButton.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void PasswordVisibility_Click(object sender, RoutedEventArgs e)
+        {
+            if (isPasswordVisible)
+            {
+                SenhaPasswordBox.Password = SenhaTextBox.Text;
+                SenhaTextBox.Visibility = Visibility.Collapsed;
+                SenhaPasswordBox.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                SenhaTextBox.Text = SenhaPasswordBox.Password;
+                SenhaTextBox.Visibility = Visibility.Visible;
+                SenhaPasswordBox.Visibility = Visibility.Collapsed;
+            }
+
+            isPasswordVisible = !isPasswordVisible;
+        }
     }
 }

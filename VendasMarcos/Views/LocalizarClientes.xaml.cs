@@ -34,7 +34,6 @@ namespace VendasMarcos.Views
                 clientes = context.Clientes.ToList();
             }
 
-
             ResultsClientesDataGrid.ItemsSource = clientes;
         }
 
