@@ -115,9 +115,9 @@ namespace VendasMarcos.Views
 
         private void TelaLoginKeyDown(object sender, KeyEventArgs e)
         {
-            if(e.Key == Key.Enter)
+            if (e.Key == Key.Enter)
             {
-                if(UsuarioTextBox.IsFocused)
+                if (UsuarioTextBox.IsFocused)
                 {
                     SenhaPasswordBox.Focus();
                     SenhaPasswordBox.SelectAll();
@@ -125,7 +125,7 @@ namespace VendasMarcos.Views
                     SenhaTextBox.Focus();
                     SenhaTextBox.SelectAll();
                 }
-                else if(SenhaPasswordBox.IsFocused || SenhaTextBox.IsFocused)
+                else if (SenhaPasswordBox.IsFocused || SenhaTextBox.IsFocused)
                 {
                     SubmeterLogin();
                 }
