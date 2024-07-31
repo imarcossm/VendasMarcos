@@ -19,6 +19,12 @@ namespace VendasMarcos.Views
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
+            SubmeterLogin();
+        }
+
+
+        private void SubmeterLogin()
+        {
             string usuario = UsuarioTextBox.Text;
             string senha = SenhaPasswordBox.Password;
 
@@ -41,6 +47,8 @@ namespace VendasMarcos.Views
                 Confirmou = false;
                 loginInvalido.Visibility = Visibility.Visible;
                 MessageBox.Show("Usuário ou senha inválidos.");
+                UsuarioTextBox.Focus();
+                UsuarioTextBox.SelectAll();
             }
         }
 
@@ -85,35 +93,6 @@ namespace VendasMarcos.Views
             }
         }
 
-        private void UsuarioTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                SenhaPasswordBox.Focus(); // Muda o foco para a PasswordBox
-                e.Handled = true;
-            }
-        }
-
-        private void SenhaPasswordBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                // Define o foco no botão de login sem chamar o método de clique
-                LoginButton.Focus();
-                e.Handled = true;
-            }
-        }
-
-        private void SenhaTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                // Define o foco no botão de login sem chamar o método de clique
-                LoginButton.Focus();
-                e.Handled = true;
-            }
-        }
-
         private void PasswordVisibility_Click(object sender, RoutedEventArgs e)
         {
             if (isPasswordVisible)
@@ -121,15 +100,36 @@ namespace VendasMarcos.Views
                 SenhaPasswordBox.Password = SenhaTextBox.Text;
                 SenhaTextBox.Visibility = Visibility.Collapsed;
                 SenhaPasswordBox.Visibility = Visibility.Visible;
+                SenhaPasswordBox.Focus();
             }
             else
             {
                 SenhaTextBox.Text = SenhaPasswordBox.Password;
                 SenhaTextBox.Visibility = Visibility.Visible;
                 SenhaPasswordBox.Visibility = Visibility.Collapsed;
+                SenhaTextBox.Focus();
             }
 
             isPasswordVisible = !isPasswordVisible;
+        }
+
+        private void TelaLoginKeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                if(UsuarioTextBox.IsFocused)
+                {
+                    SenhaPasswordBox.Focus();
+                    SenhaPasswordBox.SelectAll();
+
+                    SenhaTextBox.Focus();
+                    SenhaTextBox.SelectAll();
+                }
+                else if(SenhaPasswordBox.IsFocused || SenhaTextBox.IsFocused)
+                {
+                    SubmeterLogin();
+                }
+            }
         }
     }
 }

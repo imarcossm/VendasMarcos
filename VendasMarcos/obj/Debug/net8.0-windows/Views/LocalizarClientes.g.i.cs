@@ -90,7 +90,7 @@ namespace VendasMarcos.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/VendasMarcos;component/views/localizarclientes.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/VendasMarcos;V1.0.0.0;component/views/localizarclientes.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\LocalizarClientes.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
