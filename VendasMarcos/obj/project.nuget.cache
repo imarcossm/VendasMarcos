@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oIsLSL/s1t9zXjf9LiwOK2KElGWhKU93Azqb/zp393QQOMukUwBDyS+6uYRPqKtM017kI/9JKWy8YkYBaATSIQ==",
+  "dgSpecHash": "D9Ue5taBvz8=",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\VendasMarcos\\VendasMarcos\\VendasMarcos.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\VendasMarcos\\VendasMarcos\\VendasMarcos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
