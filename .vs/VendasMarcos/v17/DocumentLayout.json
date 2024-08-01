@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|solutionrelative:vendasmarcos\\views\\telalogin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|d:\\projetos\\vendasmarcos\\vendasmarcos\\views\\localizarprodutos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|solutionrelative:vendasmarcos\\views\\localizarprodutos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|d:\\projetos\\vendasmarcos\\vendasmarcos\\views\\telalogin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|solutionrelative:vendasmarcos\\views\\telalogin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|d:\\projetos\\vendasmarcos\\vendasmarcos\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|solutionrelative:vendasmarcos\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|d:\\projetos\\vendasmarcos\\vendasmarcos\\views\\telalogin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|solutionrelative:vendasmarcos\\views\\telalogin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|d:\\projetos\\vendasmarcos\\vendasmarcos\\views\\localizarprodutos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|solutionrelative:vendasmarcos\\views\\localizarprodutos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3753172-3E3D-4F74-A5D3-455D33E10558}|VendasMarcos\\VendasMarcos.csproj|d:\\projetos\\vendasmarcos\\vendasmarcos\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -63,18 +63,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TelaLogin.xaml",
-              "DocumentMoniker": "D:\\Projetos\\VendasMarcos\\VendasMarcos\\Views\\TelaLogin.xaml",
-              "RelativeDocumentMoniker": "VendasMarcos\\Views\\TelaLogin.xaml",
-              "ToolTip": "D:\\Projetos\\VendasMarcos\\VendasMarcos\\Views\\TelaLogin.xaml",
-              "RelativeToolTip": "VendasMarcos\\Views\\TelaLogin.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-29T19:53:15.561Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "App.xaml",
               "DocumentMoniker": "D:\\Projetos\\VendasMarcos\\VendasMarcos\\App.xaml",
@@ -87,20 +75,32 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TelaLogin.xaml",
+              "DocumentMoniker": "D:\\Projetos\\VendasMarcos\\VendasMarcos\\Views\\TelaLogin.xaml",
+              "RelativeDocumentMoniker": "VendasMarcos\\Views\\TelaLogin.xaml",
+              "ToolTip": "D:\\Projetos\\VendasMarcos\\VendasMarcos\\Views\\TelaLogin.xaml",
+              "RelativeToolTip": "VendasMarcos\\Views\\TelaLogin.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-29T19:53:15.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "TelaLogin.xaml.cs",
               "DocumentMoniker": "D:\\Projetos\\VendasMarcos\\VendasMarcos\\Views\\TelaLogin.xaml.cs",
               "RelativeDocumentMoniker": "VendasMarcos\\Views\\TelaLogin.xaml.cs",
               "ToolTip": "D:\\Projetos\\VendasMarcos\\VendasMarcos\\Views\\TelaLogin.xaml.cs",
               "RelativeToolTip": "VendasMarcos\\Views\\TelaLogin.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAG4AAAANAAAA",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAcwHQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-04T19:42:52.295Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "LocalizarProdutos.xaml.cs",
               "DocumentMoniker": "D:\\Projetos\\VendasMarcos\\VendasMarcos\\Views\\LocalizarProdutos.xaml.cs",
               "RelativeDocumentMoniker": "VendasMarcos\\Views\\LocalizarProdutos.xaml.cs",
@@ -108,8 +108,7 @@
               "RelativeToolTip": "VendasMarcos\\Views\\LocalizarProdutos.xaml.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAcwCEAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T12:17:39.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-30T12:17:39.253Z"
             },
             {
               "$type": "Document",
@@ -143,8 +142,7 @@
               "ToolTip": "D:\\Projetos\\VendasMarcos\\VendasMarcos\\MainWindow.xaml",
               "RelativeToolTip": "VendasMarcos\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-05T12:19:00.761Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-05T12:19:00.761Z"
             }
           ]
         }
