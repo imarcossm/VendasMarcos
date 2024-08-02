@@ -3,6 +3,7 @@ using System.Windows;
 using MahApps.Metro.Controls;
 using System.Windows.Input;
 using Npgsql;
+using System.Windows.Controls;
 
 namespace VendasMarcos.Views
 {
@@ -101,6 +102,7 @@ namespace VendasMarcos.Views
                 SenhaTextBox.Visibility = Visibility.Collapsed;
                 SenhaPasswordBox.Visibility = Visibility.Visible;
                 SenhaPasswordBox.Focus();
+                ToViewPassword.Template = FindResource("IconeOlhoOff") as ControlTemplate;
             }
             else
             {
@@ -108,10 +110,12 @@ namespace VendasMarcos.Views
                 SenhaTextBox.Visibility = Visibility.Visible;
                 SenhaPasswordBox.Visibility = Visibility.Collapsed;
                 SenhaTextBox.Focus();
+                ToViewPassword.Template = FindResource("IconeOlhoOn") as ControlTemplate;
             }
 
             isPasswordVisible = !isPasswordVisible;
         }
+
 
         private void TelaLoginKeyDown(object sender, KeyEventArgs e)
         {

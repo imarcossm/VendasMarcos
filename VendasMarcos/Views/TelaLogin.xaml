@@ -90,6 +90,7 @@
                             HorizontalAlignment="Center"
                             Focusable="False"
                             ToolTip="Visualizar senha"
+                            Cursor="Hand"
                             Click="PasswordVisibility_Click">
                     </Button>
                 </Grid>
