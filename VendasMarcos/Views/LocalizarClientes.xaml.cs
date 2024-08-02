@@ -20,6 +20,7 @@ namespace VendasMarcos.Views
     public partial class LocalizarClientes : MetroWindow
     {
         private List<ClientesView> clientes;
+        private DBContext DBContext = new DBContext();
         public LocalizarClientes()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace VendasMarcos.Views
             List<Clientes> clientes = new List<Clientes>();
             using(var context = new DBContext())
             {
-                clientes = context.Clientes.ToList();
+                clientes = DBContext.Clientes.ToList();
             }
 
             ResultsClientesDataGrid.ItemsSource = clientes;

@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Projetos\VendasMarcos\VendasMarcos\obj\Debug\net8.0-windows\
+C:\Projetos\VendasMarcos\VendasMarcos\obj\Debug\net8.0-windows\
 VendasMarcos
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\Projetos\VendasMarcos\VendasMarcos\App.xaml
+C:\Projetos\VendasMarcos\VendasMarcos\App.xaml
 42115426731
 
 13-434852339
-253-1099524353
+253130490420
 MainWindow.xaml;Views\LocalizarClientes.xaml;Views\LocalizarProdutos.xaml;Views\TelaLogin.xaml;
 
 False

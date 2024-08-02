@@ -4,6 +4,8 @@ using MahApps.Metro.Controls;
 using System.Windows.Input;
 using Npgsql;
 using System.Windows.Controls;
+using System.Windows.Interop;
+using System.Runtime.InteropServices;
 
 namespace VendasMarcos.Views
 {
@@ -12,11 +14,39 @@ namespace VendasMarcos.Views
         private bool isPasswordVisible = false;
         public bool Confirmou { get; private set; }
 
+        private string StringConexao;
+
         public TelaLogin()
         {
             InitializeComponent();
+
+            //construtores para arredondar a window
+            IntPtr hWnd = new WindowInteropHelper(GetWindow(this)).EnsureHandle();
+            var attribute = DWMWINDOWATTRIBUTE.DWMWA_WINDOW_CORNER_PREFERENCE;
+            var preference = DWM_WINDOW_CORNER_PREFERENCE.DWMWCP_ROUND;
+            DwmSetWindowAttribute(hWnd, attribute, ref preference, sizeof(uint));
+
             UsuarioTextBox.Focus();
         }
+
+        //lógica para arredondar a window
+        public enum DWMWINDOWATTRIBUTE
+        {
+            DWMWA_WINDOW_CORNER_PREFERENCE = 33
+        }
+        public enum DWM_WINDOW_CORNER_PREFERENCE
+        {
+            DWMWCP_DEFAULT = 0,
+            DWMWCP_DONOTROUND = 1,
+            DWMWCP_ROUND = 2,
+            DWMWCP_ROUNDSMALL = 3
+        }
+
+        [DllImport("dwmapi.dll", CharSet = CharSet.Unicode, PreserveSig = false)]
+        internal static extern void DwmSetWindowAttribute(IntPtr hwnd,
+                                                         DWMWINDOWATTRIBUTE attribute,
+                                                         ref DWM_WINDOW_CORNER_PREFERENCE pvAttribute,
+                                                         uint cbAttribute);
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
@@ -41,11 +71,13 @@ namespace VendasMarcos.Views
             if (IsValidUser(usuario, senha))
             {
                 Confirmou = true;
+                AppSettings.ConnectionString = StringConexao;
                 this.Close();
             }
             else
             {
                 Confirmou = false;
+                AppSettings.ConnectionString = "";
                 loginInvalido.Visibility = Visibility.Visible;
                 MessageBox.Show("Usuário ou senha inválidos.");
                 UsuarioTextBox.Focus();
@@ -53,26 +85,26 @@ namespace VendasMarcos.Views
             }
         }
 
-        private static bool IsValidUser(string usuario, string senha)
+        private bool IsValidUser(string usuario, string senha)
         {
             string ip = "127.0.0.1";
             string port = "5432";
             string db = "base_habsoluta";
 
-            string conexaoDB;
+
 
             if (usuario == "zeus")
             {
-                conexaoDB = $"Server={ip}; Port={port}; Database={db}; User Id={usuario}; Password={senha};";
+                StringConexao = $"Server={ip}; Port={port}; Database={db}; User Id={usuario}; Password={senha};";
             }
             else
             {
-                conexaoDB = $"Server={ip}; Port={port}; Database={db}; User Id={usuario}; Password=senha_padrao;";
+                StringConexao = $"Server={ip}; Port={port}; Database={db}; User Id={usuario}; Password=senha_padrao;";
             }
 
             try
             {
-                using (var connection = new NpgsqlConnection(conexaoDB))
+                using (var connection = new NpgsqlConnection(StringConexao))
                 {
                     connection.Open();
 
@@ -89,7 +121,6 @@ namespace VendasMarcos.Views
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erro ao conectar ao banco de dados: {ex.Message}");
                 return false;
             }
         }

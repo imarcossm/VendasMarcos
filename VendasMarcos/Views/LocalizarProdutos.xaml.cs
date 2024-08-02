@@ -21,6 +21,7 @@ namespace VendasMarcos.Views
     /// </summary>
     public partial class LocalizarProdutos : MetroWindow
     {
+        private DBContext DBContext = new DBContext();
         public LocalizarProdutos()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace VendasMarcos.Views
         {
             using (var context = new DBContext())
             {
-                var produtos = context.Produtos.ToList();
+                var produtos = DBContext.Produtos.ToList();
                 ResultsProdutosDataGrid.ItemsSource = produtos;
             }
         }
