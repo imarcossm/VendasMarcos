@@ -14,14 +14,16 @@
                    GlowBrush="#FF003BB0"
                    Height="380"
                    Width="330"
-                   Background="LightGray"
+                   Background="#F1F1F1"
                    WindowStyle="None"
                    KeyDown="TelaLoginKeyDown">
 
     <Grid>
+        
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
+
             <iconPacks:PackIconMaterial Kind="AccountLock" Foreground="#FF003BB0" Width="58" Height="66" Margin="0,0,0,10" HorizontalAlignment="Center"/>
-            <TextBlock Text="Login" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20" Cursor="Hand" RenderTransformOrigin="0.469,-0.362"/>
+            <TextBlock Text="Login" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20" RenderTransformOrigin="0.469,-0.362"/>
             <TextBlock x:Name="loginInvalido" Visibility="Collapsed" Text="Login Inválido" Foreground="Red" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
 
             <Border BorderBrush="DarkGray" BorderThickness="1" CornerRadius="8" Margin="0,0,0,10" Background="White" Padding="5">

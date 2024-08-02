@@ -166,5 +166,10 @@ namespace VendasMarcos.Views
                 }
             }
         }
+
+        private void ButtonFecharTelaLogin_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
