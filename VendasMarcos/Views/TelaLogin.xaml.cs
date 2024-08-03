@@ -57,7 +57,7 @@ namespace VendasMarcos.Views
         private void SubmeterLogin()
         {
             string usuario = UsuarioTextBox.Text;
-            string senha = SenhaPasswordBox.Password;
+            string senha = isPasswordVisible ? SenhaTextBox.Text : SenhaPasswordBox.Password;
 
             if (isPasswordVisible)
             {
@@ -73,13 +73,21 @@ namespace VendasMarcos.Views
                 Confirmou = true;
                 AppSettings.ConnectionString = StringConexao;
                 this.Close();
+
+                // Abrir MainWindow
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
             }
             else
             {
                 Confirmou = false;
                 AppSettings.ConnectionString = "";
                 loginInvalido.Visibility = Visibility.Visible;
-                MessageBox.Show("Usuário ou senha inválidos.");
+                MessageBoxResult messageBoxResult = MessageBox.Show(
+                    "Usuário ou senha inválidos.",
+                    "Aviso",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Exclamation);
                 UsuarioTextBox.Focus();
                 UsuarioTextBox.SelectAll();
             }
@@ -165,11 +173,6 @@ namespace VendasMarcos.Views
                     SubmeterLogin();
                 }
             }
-        }
-
-        private void ButtonFecharTelaLogin_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
