@@ -17,7 +17,6 @@ namespace VendasMarcos
         public MainWindow()
         {
             InitializeComponent();
-           // CarregaWindow();
         }
 
         private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
@@ -28,9 +27,9 @@ namespace VendasMarcos
         private void CarregaWindow()
         {
             TelaLogin telaLogin = new TelaLogin();
-            telaLogin.ShowDialog();
+            bool? loginResult = telaLogin.ShowDialog();
 
-            if (!telaLogin.Confirmou)
+            if (loginResult != true || !telaLogin.Confirmou)
             {
                 ShowExitConfirmation();
             }
@@ -50,13 +49,12 @@ namespace VendasMarcos
             localizarProdutos.ShowDialog();
         }
 
-
         private void MetroWindow_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.Key == Key.Escape)
+            if (e.Key == Key.Escape)
             {
                 e.Handled = true;
-                if(!_isClosingConfirmed )
+                if (!_isClosingConfirmed)
                 {
                     ShowExitConfirmation();
                 }

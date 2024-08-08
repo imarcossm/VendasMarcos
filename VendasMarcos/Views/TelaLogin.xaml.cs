@@ -20,7 +20,7 @@ namespace VendasMarcos.Views
         {
             InitializeComponent();
 
-            //construtores para arredondar a window
+            // Construtores para arredondar a window
             IntPtr hWnd = new WindowInteropHelper(GetWindow(this)).EnsureHandle();
             var attribute = DWMWINDOWATTRIBUTE.DWMWA_WINDOW_CORNER_PREFERENCE;
             var preference = DWM_WINDOW_CORNER_PREFERENCE.DWMWCP_ROUND;
@@ -29,7 +29,7 @@ namespace VendasMarcos.Views
             UsuarioTextBox.Focus();
         }
 
-        //lógica para arredondar a window
+        // Lógica para arredondar a window
         public enum DWMWINDOWATTRIBUTE
         {
             DWMWA_WINDOW_CORNER_PREFERENCE = 33
@@ -53,30 +53,17 @@ namespace VendasMarcos.Views
             SubmeterLogin();
         }
 
-
         private void SubmeterLogin()
         {
             string usuario = UsuarioTextBox.Text;
             string senha = isPasswordVisible ? SenhaTextBox.Text : SenhaPasswordBox.Password;
 
-            if (isPasswordVisible)
-            {
-                senha = SenhaTextBox.Text;
-            }
-            else
-            {
-                senha = SenhaPasswordBox.Password;
-            }
-
             if (IsValidUser(usuario, senha))
             {
                 Confirmou = true;
                 AppSettings.ConnectionString = StringConexao;
+                this.DialogResult = true; // Define o resultado do diálogo como true
                 this.Close();
-
-                // Abrir MainWindow
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
             }
             else
             {
@@ -98,8 +85,6 @@ namespace VendasMarcos.Views
             string ip = "127.0.0.1";
             string port = "5432";
             string db = "base_habsoluta";
-
-
 
             if (usuario == "zeus")
             {
@@ -154,7 +139,6 @@ namespace VendasMarcos.Views
 
             isPasswordVisible = !isPasswordVisible;
         }
-
 
         private void TelaLoginKeyDown(object sender, KeyEventArgs e)
         {
